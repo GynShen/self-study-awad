@@ -12,6 +12,6 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/{username}', function($username) {
-    return view('welcome', ['username' => $username]);
-});
+// Route::get('/{username}', function($username) {
+//     return view('welcome', ['username' => $username]);
+// });

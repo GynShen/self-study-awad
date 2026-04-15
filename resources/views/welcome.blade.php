@@ -405,7 +405,7 @@
 </head>
 
 <body class="antialiased">
-    <h1>Hi, {{ $username ?? 'Guest' }}</h1>
+    {{-- <h1>Hi, {{ $username }}</h1> --}}
     <nav>
         <ul style="display: flex; gap: 1rem; list-style: none; padding: 0;">
             <li><a href="/">Home</a></li>
