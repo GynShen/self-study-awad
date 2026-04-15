@@ -7,8 +7,8 @@ Route::get('users/{username}', [UserController::class, 'index']);
 // Route::get('users/{user}', [UserController::class, 'index']);
 
 Route::get('/', function () {
-    // return view('welcome');
-    return redirect('about');
+    return view('welcome');
+    // return redirect('about');
 });
 
 Route::view('/contact', 'contact');
