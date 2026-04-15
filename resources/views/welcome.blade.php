@@ -408,11 +408,11 @@
     <nav>
         <li>
             <ul><a href="/">Home</a></ul>
-            <ul><a href="/about">About Us</ul>
-            <ul><a href="contact">Contact Us</ul>
+            <ul><a href="/about">About Us</a></ul>
+            <ul><a href="/contact">Contact Us</a></ul>
         </li>
     </nav>
-    <h1>Hi, {{ $username }}</h1>
+    <h1>Hi, {{ $username ?? 'Guest' }}</h1>
     <div
         class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         @if (Route::has('login'))
