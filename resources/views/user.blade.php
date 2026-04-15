@@ -15,3 +15,8 @@
 @endforeach
 
 @include('userInner')
+
+<script>
+  var data=@json($users);
+  console.warn(data);
+</script>
