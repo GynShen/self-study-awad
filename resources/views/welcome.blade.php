@@ -406,11 +406,11 @@
 
 <body class="antialiased">
     <nav>
-        <li>
-            <ul><a href="/">Home</a></ul>
-            <ul><a href="/about">About Us</a></ul>
-            <ul><a href="/contact">Contact Us</a></ul>
-        </li>
+        <ul style="display: flex; gap: 1rem; list-style: none; padding: 0;">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
     </nav>
     <h1>Hi, {{ $username ?? 'Guest' }}</h1>
     <div
