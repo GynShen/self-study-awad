@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/{username}', function($username) {
+    return view('welcome', ['username' => $username]);
+});
+
 Route::view('/contact', 'contact');
 
 Route::get('/about', function () {
