@@ -14,6 +14,7 @@ class User extends Model
 
     public function company() 
     {
-        return $this->hasOne('App\Models\Company');
+        // return $this->hasOne('App\Models\Company');
+        return $this->hasMany('App\Models\Company');
     }
 }
