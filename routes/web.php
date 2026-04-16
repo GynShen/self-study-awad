@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
+Route::post('/signUp', [UserController::class, 'signUp']);
+Route::view('/signUp', 'signUp');
+
 Route::post('updateUser', [UserController::class, 'storeUser']);
 Route::get('updateUser/{id}', [UserController::class, 'updateUser']);
 

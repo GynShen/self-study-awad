@@ -8,6 +8,14 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    public function signUp(Request $req)
+    {
+        $data = $req->all();
+        $data['is_admin'] = 0;
+        User::create($data);
+        return('Signup successful');
+    }
+
     public function storeUser(Request $req) 
     {
         $id = $req->id;
