@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
+Route::get('/datatest',[UserController::class, 'testData']);
+
 Route::get('users/{user}', [UserController::class, 'loadView']);
 
 // Route::get('users/{user}', [UserController::class, 'index']);
