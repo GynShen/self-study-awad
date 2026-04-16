@@ -8,6 +8,16 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    public function deleteUser($id)
+    {
+        // $data = User::find($id);
+        // $data->delete();
+        // return redirect('datatest');
+
+        User::destroy($id);
+        return redirect('datatest');
+    }
+
     public function addUser(Request $req)
     {
         $user = new User;

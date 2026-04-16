@@ -4,15 +4,17 @@
 
 <table border="1">
     <tr>
-        <td>ID</td>
-        <td>Name</td>
-        <td>Email</td>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Operations</th>
     </tr>
     @foreach ($users as $user)
         <tr>
             <td>{{ $user->id }}</td>
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
+            <td><a href="/deleteUser/{{ $user->id }}">Delete</a></td>
         </tr>
     @endforeach
 </table>
