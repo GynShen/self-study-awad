@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
-Route::get('deleteUser/{id}', [UserController::class,'deleteUser']);
+Route::post('updateUser', [UserController::class, 'storeUser']);
+Route::get('updateUser/{id}', [UserController::class, 'updateUser']);
 
-Route::post('/addUser', [UserController::class, 'addUSer']);
-Route::get('/addUser', function(){
+Route::get('deleteUser/{id}', [UserController::class, 'deleteUser']);
+
+Route::post('/addUser', [UserController::class, 'addUser']);
+Route::get('/addUser', function () {
     return view('addUser');
 });
 
