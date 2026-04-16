@@ -5,12 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
+use App\Models\Company;
 
 class UserController extends Controller
 {
-    public function getCompany() 
+    public function getUser()
     {
-        $user = User::findOrFail(2);
+        $company = Company::findOrFail(1);
+        return $company->user;
+    }
+
+    public function getCompany()
+    {
+        $user = User::findOrFail(9);
         return $user->company;
     }
 
