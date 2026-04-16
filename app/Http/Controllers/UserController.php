@@ -8,18 +8,24 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    public function getCompany() 
+    {
+        $user = User::findOrFail(2);
+        return $user->company;
+    }
+
     public function signUp(Request $req)
     {
         $data = $req->all();
         $data['is_admin'] = 0;
         User::create($data);
-        return('Signup successful');
+        return ('Signup successful');
     }
 
-    public function storeUser(Request $req) 
+    public function storeUser(Request $req)
     {
         $id = $req->id;
-        $user=User::find($id);
+        $user = User::find($id);
         $user->name = $req->name;
         $user->email = $req->email;
         $user->save();
