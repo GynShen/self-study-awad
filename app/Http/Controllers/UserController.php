@@ -11,7 +11,8 @@ class UserController extends Controller
     public function testData()
     {
         // return DB::select("select * from users");
-        return User::all();
+        $data = User::paginate(3);
+        return view('user', ['users'=>$data]);
     }
 
     public function index($user)
