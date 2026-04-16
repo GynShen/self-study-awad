@@ -1,6 +1,6 @@
 <x-header data=Users />
 
-<h3>This is a list of Users</h3>
+<h3>This is the list of Users</h3>
 
 <table border="1">
     <tr>
@@ -10,12 +10,9 @@
     </tr>
     @foreach ($users as $user)
         <tr>
-            {{-- <td>{{ $user['id'] }}</td>
-            <td>{{ $user['name'] }}</td>
-            <td>{{ $user['email'] }}</td> --}}
             <td>{{ $user->id }}</td>
             <td>{{ $user->name }}</td>
-            <td>{{ $user->email }}</td
+            <td>{{ $user->email }}</td>
         </tr>
     @endforeach
 </table>
@@ -26,6 +23,6 @@
 
 <style>
     .w-5 {
-        display: none
+        display: none;
     }
 </style>
