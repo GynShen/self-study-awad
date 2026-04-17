@@ -24,14 +24,14 @@ class PostController extends Controller
 
     public function update(Request $req, $id)
     {
-        $post=Post::findOrFail($id);
+        $post = Post::findOrFail($id);
         $post->update($req->all());
         return $post;
     }
 
     public function destroy($id)
     {
-        $post=Post::findOrFail($id);
+        $post = Post::findOrFail($id);
         $post->delete();
         return 204;
     }

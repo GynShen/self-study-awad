@@ -9,7 +9,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 </head>
@@ -31,9 +31,11 @@
                 @endauth
             </div>
         @endif
-
     </div>
     <div id="example"></div>
+    <div id="test"></div>
+    <div id="basic"></div>
 </body>
 <script src="/js/app.js"></script>
+
 </html>

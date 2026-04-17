@@ -7,7 +7,7 @@ use App\Http\Controllers\PostController;
 
 Route::get('/posts/index', [PostController::class, 'index']);
 Route::get('posts/show', [PostController::class, 'create']);;
-
+Route::get('posts/destroy/{id}', [PostController::class, 'destroy']);
 
 Route::post('/login', [UserController::class, 'login']);
 Route::view('/login', 'login');
