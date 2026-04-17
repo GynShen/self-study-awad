@@ -2,13 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 
 Route::post('/login', [UserController::class, 'login']);
 Route::view('/login', 'login');
 
-Route::get('/getUser', [UserController::class,'getUser']);
+Route::get('/getUser', [UserController::class, 'getUser']);
 
-Route::get('/getCompany',[UserController::class,'getCompany']);
+Route::get('/getCompany', [UserController::class, 'getCompany']);
 
 Route::post('/signUp', [UserController::class, 'signUp']);
 Route::view('/signUp', 'signUp');
@@ -43,3 +44,6 @@ Route::get('/about', function () {
 // Route::get('/{username}', function($username) {
 //     return view('welcome', ['username' => $username]);
 // });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
