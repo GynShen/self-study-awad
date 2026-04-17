@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\PostController;
+
+Route::get('/posts/index', [PostController::class, 'index']);
+Route::get('posts/show', [PostController::class, 'create']);;
+
 
 Route::post('/login', [UserController::class, 'login']);
 Route::view('/login', 'login');
