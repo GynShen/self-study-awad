@@ -1,19 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Table, Button} from 'reactstrap';
 
 function Example() {
     return (
+    
         <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-md-8">
-                    <div className="card">
-                        <div className="card-header">Example Component</div>
-
-                        <div className="card-body">I'm an example component!</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>React Post 1</td>
+                    <td>This is the first reactstrap Post </td>
+                    <td>
+                    <Button color="success" size="sm">Edit</Button>
+                    <Button color="danger" size="sm">Delete</Button>
+                    </td>
+                </tr>
+            </tbody>
+        </Table>
+    </div>
+      
     );
 }
 
